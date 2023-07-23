@@ -1,4 +1,4 @@
-package br.com.jannuzziTec.Proposta.domain.actions;
+package br.com.jannuzziTec.proposta.domain.actions;
 
 public enum Action {
     GERAR,

@@ -1,4 +1,4 @@
-package br.com.jannuzziTec.Proposta.configuracao;
+package br.com.jannuzziTec.proposta.configuracao;
 
 import com.amazonaws.services.sqs.AmazonSQSRequester;
 import com.amazonaws.services.sqs.AmazonSQSRequesterClientBuilder;

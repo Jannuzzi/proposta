@@ -1,4 +1,4 @@
-package br.com.jannuzziTec.Proposta;
+package br.com.jannuzziTec.proposta;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

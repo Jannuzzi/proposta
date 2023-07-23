@@ -1,4 +1,4 @@
-package br.com.jannuzziTec.Proposta;
+package br.com.jannuzziTec.proposta;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

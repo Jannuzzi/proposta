@@ -1,8 +1,8 @@
-package br.com.jannuzziTec.Proposta.domain.usacases;
+package br.com.jannuzziTec.proposta.domain.usacases;
 
-import br.com.jannuzziTec.Proposta.domain.actions.Action;
-import br.com.jannuzziTec.Proposta.domain.saga.Saga;
-import br.com.jannuzziTec.Proposta.domain.saga.SagaValidadores;
+import br.com.jannuzziTec.proposta.domain.actions.Action;
+import br.com.jannuzziTec.proposta.domain.saga.Saga;
+import br.com.jannuzziTec.proposta.domain.saga.SagaValidadores;
 
 import org.springframework.stereotype.Service;
 
@@ -10,7 +10,7 @@ import java.util.Arrays;
 import java.util.List;
 
 @Service
-public class MotorSagaImpl implements IMotorSaga {
+public class MotorSagaImpl implements MotorSagaUseCase {
     @Override
     public Saga enquadrarSaga(final SagaValidadores sagaValidadores) {
         List<Saga> sagaFiltrada = Arrays.stream(Saga.values())

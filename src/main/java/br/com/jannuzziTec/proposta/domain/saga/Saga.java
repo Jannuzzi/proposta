@@ -1,6 +1,6 @@
-package br.com.jannuzziTec.Proposta.domain.saga;
+package br.com.jannuzziTec.proposta.domain.saga;
 
-import br.com.jannuzziTec.Proposta.domain.usacases.SagaDefaultImpl;
+import br.com.jannuzziTec.proposta.domain.usacases.EnquadrarSagaDefaultImpl;
 import lombok.Getter;
 
 @Getter
@@ -8,7 +8,7 @@ public enum Saga {
 
     DEFAULT {
         public boolean enquadrar(SagaValidadores sagaValidadores) {
-            return new SagaDefaultImpl(sagaValidadores).enquadrar();
+            return new EnquadrarSagaDefaultImpl(sagaValidadores).enquadrar();
         }
 
         public GrupoSaga grupo() {

@@ -1,4 +1,4 @@
-package br.com.jannuzziTec.Proposta.domain.saga;
+package br.com.jannuzziTec.proposta.domain.saga;
 
 public enum GrupoSaga {
     DEFAULT,

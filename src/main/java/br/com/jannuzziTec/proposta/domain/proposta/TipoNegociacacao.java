@@ -1,4 +1,4 @@
-package br.com.jannuzziTec.Proposta.domain.proposta;
+package br.com.jannuzziTec.proposta.domain.proposta;
 
 import lombok.AllArgsConstructor;
 

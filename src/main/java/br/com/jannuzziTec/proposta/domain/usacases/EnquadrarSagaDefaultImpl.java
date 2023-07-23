@@ -1,12 +1,12 @@
-package br.com.jannuzziTec.Proposta.domain.usacases;
+package br.com.jannuzziTec.proposta.domain.usacases;
 
-import br.com.jannuzziTec.Proposta.domain.actions.Action;
-import br.com.jannuzziTec.Proposta.domain.saga.Saga;
-import br.com.jannuzziTec.Proposta.domain.saga.SagaValidadores;
+import br.com.jannuzziTec.proposta.domain.actions.Action;
+import br.com.jannuzziTec.proposta.domain.saga.Saga;
+import br.com.jannuzziTec.proposta.domain.saga.SagaValidadores;
 
-public class SagaDefaultImpl extends SagaAbstract {
+public class EnquadrarSagaDefaultImpl extends EnquadrarSagaAbstract {
 
-    public SagaDefaultImpl(SagaValidadores sagaValidadores) {
+    public EnquadrarSagaDefaultImpl(SagaValidadores sagaValidadores) {
         super(sagaValidadores);
     }
 
