@@ -12,29 +12,10 @@ public class SagaDefaultImpl extends SagaAbstract {
 
     @Override
     public void preencherActions() {
-        enumMap.put(Action.GERAR, new EnquadrarGerar());
-        enumMap.put(Action.CONFIRMAR, new EnquadrarConfirmar());
-        enumMap.put(Action.CONSULTAR, new EnquadrarConsultar());
-    }
-
-    static class EnquadrarGerar implements EnquadrarAction {
-        @Override
-        public boolean enquadrar(SagaValidadores sagaValidadores) {
-            return sagaValidadores.getSaga() == Saga.DEFAULT;
-        }
-    }
-
-    static class EnquadrarConfirmar implements EnquadrarAction {
-        @Override
-        public boolean enquadrar(SagaValidadores sagaValidadores) {
-            return sagaValidadores.getSaga() == Saga.DEFAULT;
-        }
-    }
-
-    static class EnquadrarConsultar implements EnquadrarAction {
-        @Override
-        public boolean enquadrar(SagaValidadores sagaValidadores) {
-            return sagaValidadores.getSaga() == Saga.DEFAULT;
-        }
+        enumMap.put(Action.GERAR, () -> sagaValidadores.getSaga() == Saga.DEFAULT);
+        enumMap.put(Action.CONFIRMAR, () -> sagaValidadores.getSaga() == Saga.DEFAULT);
+        enumMap.put(Action.CONSULTAR, () -> sagaValidadores.getSaga() == Saga.DEFAULT);
+        enumMap.put(Action.EXPIRAR, () -> sagaValidadores.getSaga() == Saga.DEFAULT);
+        enumMap.put(Action.EFETIVAR, () -> sagaValidadores.getSaga() == Saga.DEFAULT);
     }
 }

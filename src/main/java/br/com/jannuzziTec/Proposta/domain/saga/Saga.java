@@ -12,20 +12,20 @@ public enum Saga  {
 
     DEFAULT_FORMALIZACAO_REMOTA{
         public boolean enquadrar(SagaValidadores sagaValidadores) {
-            return new SagaDefaultImpl(sagaValidadores).enquadrar();
+            return false; //new SagaDefaultImpl(sagaValidadores).enquadrar();
         }
     },
     ICDC{
         public boolean enquadrar(SagaValidadores sagaValidadores) {
-            return new SagaDefaultImpl(sagaValidadores).enquadrar();
+            return false; //new SagaDefaultImpl(sagaValidadores).enquadrar();
         }
     },
     PARCELA_UNICA{
         public boolean enquadrar(SagaValidadores sagaValidadores) {
-            return new SagaDefaultImpl(sagaValidadores).enquadrar();
+            return false; //new SagaDefaultImpl(sagaValidadores).enquadrar();
         }
     };
 
-    abstract boolean enquadrar(SagaValidadores sagaValidadores);
+    public abstract boolean enquadrar(SagaValidadores sagaValidadores);
 
 }
