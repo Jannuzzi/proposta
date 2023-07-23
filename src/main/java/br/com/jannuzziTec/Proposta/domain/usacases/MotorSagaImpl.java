@@ -14,7 +14,9 @@ public class MotorSagaImpl implements IMotorSaga {
     @Override
     public Saga enquadrarSaga(SagaValidadores sagaValidadores) {
         List<Saga> sagaFiltrada = Arrays.stream(Saga.values())
-                .filter(saga -> saga.enquadrar(sagaValidadores)).toList();
+                .filter(saga -> saga.enquadrar(sagaValidadores))
+                .filter(saga -> saga.grupo() == sagaValidadores.getSaga().grupo())
+                .toList();
 
         if (sagaFiltrada.size() != 1)
             throw new RuntimeException("Não foi possível enquadrar Saga. Dados Enquadramento: " + sagaValidadores);
