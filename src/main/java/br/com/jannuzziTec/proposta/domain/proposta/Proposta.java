@@ -11,4 +11,8 @@ public class Proposta implements SaidaProposta{//TODO avaliar outra formar de fa
     private String canal;
     private Saga saga;
     private TipoNegociacacao tipoNegociacacao;
+
+    public static String gerarIdProposta(){
+        return "1234";
+    }
 }
