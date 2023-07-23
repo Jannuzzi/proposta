@@ -12,7 +12,7 @@ import java.util.List;
 @Service
 public class MotorSagaImpl implements IMotorSaga {
     @Override
-    public Saga enquadrarSaga(SagaValidadores sagaValidadores) {
+    public Saga enquadrarSaga(final SagaValidadores sagaValidadores) {
         List<Saga> sagaFiltrada = Arrays.stream(Saga.values())
                 .filter(saga -> saga.enquadrar(sagaValidadores))
                 .filter(saga -> saga.grupo() == sagaValidadores.getSaga().grupo())
@@ -21,11 +21,11 @@ public class MotorSagaImpl implements IMotorSaga {
         if (sagaFiltrada.size() != 1)
             throw new RuntimeException("Não foi possível enquadrar Saga. Dados Enquadramento: " + sagaValidadores);
 
-        return sagaFiltrada.get(0);
+        return sagaFiltrada.stream().findFirst().get();
     }
 
     public static void main(String[] args) {
-        SagaValidadores sagaValidadores = SagaValidadores.of(
+        final SagaValidadores sagaValidadores = SagaValidadores.of(
                 Saga.DEFAULT,
                 "C1",
                 "1",

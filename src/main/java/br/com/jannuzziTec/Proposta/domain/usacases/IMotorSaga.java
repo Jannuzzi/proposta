@@ -5,5 +5,5 @@ import br.com.jannuzziTec.Proposta.domain.saga.SagaValidadores;
 
 public interface IMotorSaga {
 
-    Saga enquadrarSaga(SagaValidadores saga);
+    Saga enquadrarSaga(final SagaValidadores saga);
 }
