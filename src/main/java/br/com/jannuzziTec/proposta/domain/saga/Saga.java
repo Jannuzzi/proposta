@@ -1,6 +1,6 @@
 package br.com.jannuzziTec.proposta.domain.saga;
 
-import br.com.jannuzziTec.proposta.domain.usacases.EnquadrarSagaDefaultImpl;
+import br.com.jannuzziTec.proposta.domain.usacases.impl.EnquadrarSagaDefaultImpl;
 import lombok.Getter;
 
 @Getter

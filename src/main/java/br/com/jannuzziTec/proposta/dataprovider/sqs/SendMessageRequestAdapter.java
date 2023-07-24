@@ -1,4 +1,4 @@
-package br.com.jannuzziTec.proposta.domain.usacases;
+package br.com.jannuzziTec.proposta.dataprovider.sqs;
 
 import br.com.jannuzziTec.proposta.domain.message.MessageResponse;
 import br.com.jannuzziTec.proposta.domain.message.dto.MessageDTO;
@@ -15,7 +15,7 @@ import java.util.concurrent.TimeoutException;
 
 @Service
 @RequiredArgsConstructor
-public class SendMessageRequestImpl implements SendMessageRequestPort {
+public class SendMessageRequestAdapter implements SendMessageRequestPort {
 
     private final AmazonSQSRequester amazonSQSRequester;
 

@@ -1,9 +1,10 @@
-package br.com.jannuzziTec.proposta.domain.usacases;
+package br.com.jannuzziTec.proposta.domain.usacases.impl;
 
 import br.com.jannuzziTec.proposta.domain.actions.Action;
 import br.com.jannuzziTec.proposta.domain.saga.Saga;
 import br.com.jannuzziTec.proposta.domain.saga.SagaValidadores;
 
+import br.com.jannuzziTec.proposta.domain.usacases.MotorSagaUseCase;
 import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
