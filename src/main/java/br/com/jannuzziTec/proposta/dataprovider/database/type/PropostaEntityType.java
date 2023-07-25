@@ -5,8 +5,6 @@ import br.com.jannuzziTec.proposta.dataprovider.database.mapper.PropostaToPropos
 import br.com.jannuzziTec.proposta.domain.proposta.Proposta;
 import org.springframework.stereotype.Component;
 
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 @Component//TODO acho que não precisa.
