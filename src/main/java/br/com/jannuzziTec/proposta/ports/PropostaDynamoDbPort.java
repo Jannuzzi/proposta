@@ -8,4 +8,8 @@ import java.math.BigInteger;
 public interface PropostaDynamoDbPort {
 
     void salvar(Proposta proposta);
+
+    Proposta consultar(String idProposta);
+
+    void atualizar(Proposta proposta);
 }

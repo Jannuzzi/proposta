@@ -1,4 +1,4 @@
-package br.com.jannuzziTec.proposta.dataprovider;
+package br.com.jannuzziTec.proposta.dataprovider.database;
 
 import br.com.jannuzziTec.proposta.dataprovider.database.PropostaRepository;
 import br.com.jannuzziTec.proposta.dataprovider.database.entity.PropostaEntity;
@@ -13,7 +13,7 @@ import java.util.concurrent.atomic.AtomicReference;
 
 @RequiredArgsConstructor
 @Service
-public class PropostaDataProvider implements PropostaDynamoDbPort {
+public class PropostaDynamoDBDataProvider implements PropostaDynamoDbPort {
     private final PropostaRepository propostaRepository;
 
     public void salvar(Proposta proposta){
@@ -35,5 +35,10 @@ public class PropostaDataProvider implements PropostaDynamoDbPort {
         // TODO implementar
         List<PropostaEntity> consultar = propostaRepository.consultar(idProposta);
         return null;
+    }
+
+    @Override
+    public void atualizar(Proposta proposta) {
+
     }
 }

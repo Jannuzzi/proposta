@@ -13,7 +13,7 @@ public abstract class CacheRepositoryAbstract<K,V> {
     private final RedisTemplate<String, Object> redisTemplate;
     private final ObjectMapper objectMapper;
 
-    protected final void salvar(K key, V value, Duration expireDuration){
+    protected final void salvarCache(K key, V value, Duration expireDuration){
         try {
             redisTemplate.opsForValue()
                     .set(gerarChaveCache(key),
@@ -24,7 +24,7 @@ public abstract class CacheRepositoryAbstract<K,V> {
         }
     }
 
-    protected final V consultar(K key){
+    protected final V consultarCache(K key){
         Object cacheObj = redisTemplate.opsForValue().get(gerarChaveCache(key));
         return Optional.ofNullable(cacheObj)
                 .map(value -> {

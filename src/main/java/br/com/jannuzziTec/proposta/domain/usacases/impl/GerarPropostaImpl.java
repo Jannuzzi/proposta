@@ -11,7 +11,7 @@ import br.com.jannuzziTec.proposta.domain.saga.mapper.PropostaInputToSagaValidad
 import br.com.jannuzziTec.proposta.domain.saga.mapper.SagaPropostaMapper;
 import br.com.jannuzziTec.proposta.domain.usacases.MotorSagaUseCase;
 import br.com.jannuzziTec.proposta.domain.usacases.GerarPropostaUseCase;
-import br.com.jannuzziTec.proposta.domain.usacases.factory.SagaFactory;
+import br.com.jannuzziTec.proposta.domain.usacases.factory.GerarPropostaSagaFactory;
 import br.com.jannuzziTec.proposta.entrypoint.controller.model.GerarPropostaInput;
 import br.com.jannuzziTec.proposta.ports.PropostaDynamoDbPort;
 import br.com.jannuzziTec.proposta.ports.SendMessageRequestPort;
@@ -26,7 +26,7 @@ public class GerarPropostaImpl implements GerarPropostaUseCase<GerarPropostaInpu
     private static final Action GERAR = Action.GERAR;
     private final MotorSagaUseCase motorSagaUseCase;
     private final PropostaDynamoDbPort propostaDynamoDbPort;
-    private final SagaFactory sagaFactory;
+    private final GerarPropostaSagaFactory gerarPropostaSagaFactory;
     private final SendMessageRequestPort sendMessageRequestPort;
     private final MessageDTOMapper messageDTOMapper;
     private final SagaPropostaMapper sagaPropostaMapper;
@@ -40,7 +40,7 @@ public class GerarPropostaImpl implements GerarPropostaUseCase<GerarPropostaInpu
         Saga saga = motorSagaUseCase.enquadrarSaga(sagaValidadores);
 
         //executar consultas de dados complementares
-        SagaFactory.mapaSaga.get(saga)
+        GerarPropostaSagaFactory.mapaSaga.get(saga)
                 .consultarDadosComplementares(gerarPropostaInput);
 
         // salvar no dynamo

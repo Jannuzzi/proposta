@@ -15,7 +15,7 @@ import java.util.concurrent.TimeoutException;
 
 @Service
 @RequiredArgsConstructor
-public class SendMessageRequestAdapter implements SendMessageRequestPort {
+public class SendMessageRequestDataProvider implements SendMessageRequestPort {
 
     private final AmazonSQSRequester amazonSQSRequester;
 

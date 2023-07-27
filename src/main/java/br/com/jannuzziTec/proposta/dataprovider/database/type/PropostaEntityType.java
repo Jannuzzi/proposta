@@ -5,13 +5,14 @@ import br.com.jannuzziTec.proposta.dataprovider.database.mapper.PropostaToPropos
 import br.com.jannuzziTec.proposta.domain.proposta.Proposta;
 import org.springframework.stereotype.Component;
 
+import java.util.LinkedList;
 import java.util.List;
 
 @Component//TODO acho que não precisa.
 public class PropostaEntityType implements DynamoDbEntityType {
 
     private final PropostaToPropostaEntityTypeMapper propostaToPropostaEntityTypeMapper;
-
+🤨
     public PropostaEntityType(PropostaToPropostaEntityTypeMapper propostaToPropostaEntityTypeMapper) {
         this.propostaToPropostaEntityTypeMapper = propostaToPropostaEntityTypeMapper;
     }
@@ -23,6 +24,6 @@ public class PropostaEntityType implements DynamoDbEntityType {
 
     @Override
     public List<String> resgatarChaves() {
-        return List.of(ChavesDynamoDB.CHAVE_PARTICAO, ChavesDynamoDB.CHAVE_PARTICAO);
+        return new LinkedList<>(List.of(ChavesDynamoDB.CHAVE_PARTICAO, ChavesDynamoDB.CHAVE_PARTICAO));
     }
 }
