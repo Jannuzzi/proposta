@@ -12,7 +12,7 @@ import java.util.List;
 public class PropostaEntityType implements DynamoDbEntityType {
 
     private final PropostaToPropostaEntityTypeMapper propostaToPropostaEntityTypeMapper;
-🤨
+
     public PropostaEntityType(PropostaToPropostaEntityTypeMapper propostaToPropostaEntityTypeMapper) {
         this.propostaToPropostaEntityTypeMapper = propostaToPropostaEntityTypeMapper;
     }
